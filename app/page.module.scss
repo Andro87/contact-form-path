@@ -1,0 +1,21 @@
+$medium: 550px;
+
+.main {
+    min-height: 100vh;
+    margin-block: 50px;
+    @media screen and (min-width: $medium) {
+        margin-block: 80px;
+    }
+    &_container {
+        background-color: var(--white);
+        border-radius: 16px;
+        max-width: 90%;
+        margin-inline: auto;
+        padding: 24px;
+        @media screen and (min-width: $medium) {
+            width: 90%;
+            max-width: 46rem;
+            padding-inline: 30px;
+        }
+    }
+}
