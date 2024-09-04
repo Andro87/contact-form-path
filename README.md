@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Contact form](./public/assets/images/portfolio_screenshot.png)
+![Contact form](./public/assets/images/screenshot.png)
 
 ### Links
 
 -   Solution URL: [Solution URL](https://github.com/Andro87/contact-form-path.git)
--   Live Site URL: [Live site url](https://contact-form-path.vercel.app/)
+-   Live Site URL: [Live Site URL](https://contact-form-path.vercel.app/)
 
 ## My process
 

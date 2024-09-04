@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import styles from "./Form.module.scss";
 
 import { useForm } from "react-hook-form";
@@ -63,14 +62,12 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                             autoComplete="given-name"
                         />
 
-                        {errors.firstName && (
-                            <p
-                                className={styles.error_message}
-                                id="first-name-error-message"
-                            >
-                                {errors.firstName.message}
-                            </p>
-                        )}
+                        <p
+                            className={styles.error_message}
+                            id="first-name-error-message"
+                        >
+                            {errors.firstName ? errors.firstName.message : " "}
+                        </p>
                     </div>
                     <div
                         className={`${styles.input_container} ${styles.lname}`}
@@ -95,14 +92,13 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                             aria-describedby="last-name-error-message"
                             autoComplete="family-name"
                         />
-                        {errors.lastName && (
-                            <p
-                                className={styles.error_message}
-                                id="last-name-error-message"
-                            >
-                                {errors.lastName.message}
-                            </p>
-                        )}
+
+                        <p
+                            className={styles.error_message}
+                            id="last-name-error-message"
+                        >
+                            {errors.lastName ? errors.lastName.message : " "}
+                        </p>
                     </div>
                     <div
                         className={`${styles.input_container} ${styles.email}`}
@@ -132,14 +128,13 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                             aria-describedby="email-error-message"
                             autoComplete="email"
                         />
-                        {errors.email && (
-                            <p
-                                className={styles.error_message}
-                                id="email-error-message"
-                            >
-                                {errors.email.message}
-                            </p>
-                        )}
+
+                        <p
+                            className={styles.error_message}
+                            id="email-error-message"
+                        >
+                            {errors.email ? errors.email.message : " "}
+                        </p>
                     </div>
 
                     <fieldset
@@ -186,14 +181,13 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                                 support request
                             </label>
                         </div>
-                        {errors.queryType && (
-                            <p
-                                className={styles.error_message}
-                                id="general-enquiry-error-message"
-                            >
-                                {errors.queryType.message}
-                            </p>
-                        )}
+
+                        <p
+                            className={styles.error_message}
+                            id="general-enquiry-error-message"
+                        >
+                            {errors.queryType ? errors.queryType.message : " "}
+                        </p>
                     </fieldset>
                     <div
                         className={`${styles.input_container} ${styles.message}`}
@@ -218,14 +212,13 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                             aria-describedby="textarea-error-message"
                             autoComplete="on"
                         ></textarea>
-                        {errors.message && (
-                            <p
-                                className={styles.error_message}
-                                id="textarea-error-message"
-                            >
-                                {errors.message.message}
-                            </p>
-                        )}
+
+                        <p
+                            className={styles.error_message}
+                            id="textarea-error-message"
+                        >
+                            {errors.message ? errors.message.message : " "}
+                        </p>
                     </div>
                 </div>
 
@@ -247,14 +240,13 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                         </span>
                         <span className={styles.sr_only}>required</span>
                     </label>
-                    {errors.consent && (
-                        <p
-                            className={styles.error_message}
-                            id="consent-error-message"
-                        >
-                            {errors.consent.message}
-                        </p>
-                    )}
+
+                    <p
+                        className={styles.error_message}
+                        id="consent-error-message"
+                    >
+                        {errors.consent ? errors.consent.message : " "}
+                    </p>
                 </div>
 
                 <button title="submit" className={styles.btn_submit}>

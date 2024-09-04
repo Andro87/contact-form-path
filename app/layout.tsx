@@ -4,6 +4,11 @@ import "./globals.scss";
 
 const karla = Karla({ subsets: ["latin"] });
 
+export const viewport = {
+    width: "device-width",
+    initialScale: 1
+};
+
 export const metadata: Metadata = {
     title: "Frontend Mentor | Contact form",
     description:

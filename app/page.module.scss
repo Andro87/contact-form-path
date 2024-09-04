@@ -4,7 +4,7 @@ $medium: 550px;
     min-height: 100vh;
     margin-block: 50px;
     @media screen and (min-width: $medium) {
-        margin-block: 80px;
+        margin-block: 100px;
     }
     &_container {
         background-color: var(--white);

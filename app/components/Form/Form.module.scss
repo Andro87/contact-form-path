@@ -90,6 +90,7 @@ $medium: 550px;
 
 .error_message {
     color: var(--red);
+    margin: 0;
 }
 
 .fieldset {
@@ -97,7 +98,7 @@ $medium: 550px;
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
+    gap: 16px;
     legend {
         font-weight: 400;
         text-transform: capitalize;
@@ -163,19 +164,6 @@ $medium: 550px;
                 left: 24px;
             }
         }
-
-        /*  input:focus + label {
-            border: 1px solid var(--green-medium);
-            outline: 1px solid var(--green-medium);
-            background-color: var(--green-lighter);
-        }
-
-        input:checked + label::after {
-            content: url("../../../public/assets/images/icon-radio-selected.svg");
-        }
-        input:focus + label::before {
-            outline: 1px solid var(--grey-darker);
-        }*/
     }
 
     @media screen and (min-width: $medium) {
@@ -219,14 +207,10 @@ $medium: 550px;
             left: 0;
             top: 0;
         }
-    } /*
-
-    input:checked + label::after {
-        content: url("../../../public/assets/images/icon-checkbox-check.svg");
     }
-    input:focus + label::before {
-        outline: 1px solid var(--grey-darker);
-    }*/
+    p {
+        margin-top: 8px;
+    }
 }
 
 .btn_submit {
@@ -234,7 +218,7 @@ $medium: 550px;
     color: var(--white);
     font-size: 1.125rem;
     font-weight: 700;
-    padding: 1em 1.5em;
+    padding: 1.125em 1.5em;
     border-radius: 8px;
     text-transform: capitalize;
     display: block;
