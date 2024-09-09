@@ -39,7 +39,9 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
             >
                 <div className={styles.form_container}>
                     <div
-                        className={`${styles.input_container} ${styles.fname}`}
+                        className={`${styles.input_container} ${styles.fname} ${
+                            errors.firstName ? styles.error_container : " "
+                        }`}
                     >
                         <label htmlFor="first-name">
                             first name
@@ -70,7 +72,9 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                         </p>
                     </div>
                     <div
-                        className={`${styles.input_container} ${styles.lname}`}
+                        className={`${styles.input_container} ${styles.lname} ${
+                            errors.lastName ? styles.error_container : " "
+                        }`}
                     >
                         <label htmlFor="last-name">
                             last name
@@ -101,7 +105,9 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                         </p>
                     </div>
                     <div
-                        className={`${styles.input_container} ${styles.email}`}
+                        className={`${styles.input_container} ${styles.email} ${
+                            errors.email ? styles.error_container : " "
+                        }`}
                     >
                         <label htmlFor="email">
                             email address
@@ -190,7 +196,9 @@ export const Form: React.FunctionComponent<Props> = ({ onSuccessMessage }) => {
                         </p>
                     </fieldset>
                     <div
-                        className={`${styles.input_container} ${styles.message}`}
+                        className={`${styles.input_container} ${
+                            styles.message
+                        } ${errors.message ? styles.error_container : " "}`}
                     >
                         <label htmlFor="message">
                             message

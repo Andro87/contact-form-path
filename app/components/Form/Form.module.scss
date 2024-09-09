@@ -38,19 +38,35 @@ $medium: 550px;
         cursor: pointer;
         font-weight: 600;
         color: inherit;
+
         &:hover {
             border: 1px solid var(--green-medium);
         }
+        &:focus {
+            outline: 1px solid var(--green-medium);
+        }
     }
+
     textarea {
         resize: none;
     }
-    input:focus {
-        outline: 1px solid var(--green-medium);
+}
+
+.error_container {
+    input,
+    textarea {
+        border: 1px solid var(--red);
+        &:hover,
+        &:focus,
+        &:active {
+            border: 1px solid var(--red);
+            outline: 1px solid var(--red);
+        }
     }
-    textarea:focus {
-        outline: 1px solid var(--green-medium);
-    }
+}
+.error_message {
+    color: var(--red);
+    margin: 0;
 }
 
 .fname {
@@ -86,11 +102,6 @@ $medium: 550px;
     position: absolute;
     white-space: nowrap;
     width: 1px;
-}
-
-.error_message {
-    color: var(--red);
-    margin: 0;
 }
 
 .fieldset {
